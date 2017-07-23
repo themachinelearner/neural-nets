@@ -1,0 +1,12 @@
+For a single unit: Take a series of inputs, which can be continuous or discrete, multiply each by a weight, sum, and compare to a threshold.
+If greater than or equal to the threshold, output is 1. If less, output is 0.
+
+Perceptron Rule: Technique for training perceptron units. Cycle through the data, for instances that get it wrong in, bump weights
+in either the positive or negative direction adjusted by a learning constant. Guaranteed to find an answer in finite time for
+linearly seperable data sets.
+
+Replacing the threshold with a sigmoid activation function allows the use of gradient descent because the sigmoid is differentiable.
+Note that once you have done this replacement, you lose guarantee of convergence in finite time and risl becoming stuck in local optima.
+Imagine a net of perceptron units, you get an error surface that looks like a "lumpy sheet" due to the combination of parabolas from the different units.
+
+Note that inputs to a nueral net are sensitive to feature scaling, so data should be normalized prior to training.
